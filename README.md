@@ -19,8 +19,9 @@ As a trans woman buying clothes is a huge hassle. Most clothing brands don't car
 ### Design
 
 * [User Stories](DesignDocs/UserStories.md)
-* [Screen Design](DesignDocs/ScreenDesign.md)
+* [Screen Design](DesignDocs/ScreenDesign.png)
 * [Reflection Statements](DesignDocs/ReflectionStatements.md)
+* [Application Flow](DesignDocs/ApplicationFlow.md)
 
 ### [Project Plan](DesignDocs/ProjectPlan.md)
 
