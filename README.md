@@ -14,6 +14,8 @@ As a trans woman buying clothes is a huge hassle. Most clothing brands don't car
     * Maven
 * IDE
   * IntelliJ IDEA
+* Unit Testing
+  * JUnit tests
 
 
 ### Design
