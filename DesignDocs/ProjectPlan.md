@@ -2,6 +2,8 @@
 
 ### Disclaimer: this is tentative and subject to change
 
+###After week 5 I plan to come back and fill the rest in when I have a better idea of what needs to be done
+
 | Week Number | Weekly Task         |
 |-------------|---------------------|
 | Week 1      | -OFF WEEK-          |
@@ -9,8 +11,8 @@
 | Week 3      | Plan everything out |
 | Week 4      | baseline jsp pages  |
 | Week 5      | Css styling         |
-| Week 6      |                     |
-| Week 7      |                     |
+| Week 6      | -TBD-               |
+| Week 7      | -TBD-               |
 | Week 8      | -TBD-               |
 | Week 9      | -TBD-               |
 | Week 10     | -TBD-               |
