@@ -5,16 +5,17 @@
   Time: 10:49 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<jsp:include page="includes/contentType.jsp"/>
 <html>
 <head>
-    <title>Offworld Clothes - Home</title>
-    <meta http-equiv="Content-Language" content="English" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css' />
+    <title>OffWorld Clothes - Home</title>
+    <jsp:include page="includes/head.jsp"/>
 </head>
-<body>
-<h2>Hello World!</h2>
-</body>
+
+    <body>
+        <jsp:include page="includes/header.jsp"/>
+        <jsp:include page="includes/nav.jsp"/>
+        <h2>Hello World!</h2>
+        <jsp:include page="includes/footer.jsp"/>
+    </body>
 </html>

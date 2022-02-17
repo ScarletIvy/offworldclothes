@@ -30,5 +30,5 @@
 
 ### Cart
 1. contains array of product added
-2. check out is available to logged in users
+2. check out is available to logged-in users
 3. user can only check out if logged in

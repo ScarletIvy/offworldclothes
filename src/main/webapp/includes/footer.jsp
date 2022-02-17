@@ -5,7 +5,6 @@
   Time: 10:49 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div id="footer">
     <hr>
     Created By: Ivy Jochem | <a href="mailto:ejochem@madisoncollege.edu">ejochem@madisoncollege.edu</a>
