@@ -16,6 +16,8 @@ As a trans woman buying clothes is a huge hassle. Most clothing brands don't car
   * IntelliJ IDEA
 * Unit Testing
   * JUnit tests
+* ORM Framework
+  * Hibernate 5
 
 
 ### Design

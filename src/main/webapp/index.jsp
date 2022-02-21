@@ -15,7 +15,8 @@
     <body>
         <jsp:include page="includes/header.jsp"/>
         <jsp:include page="includes/nav.jsp"/>
-        <h2>Hello World!</h2>
+        <h2>Clothes for trans people, by trans people</h2>
+        <!--Featured products here-->
         <jsp:include page="includes/footer.jsp"/>
     </body>
 </html>
