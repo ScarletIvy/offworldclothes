@@ -7,5 +7,5 @@
 --%>
 <div id="header">
     <h1>OffWorld Clothes</h1>
-    <p><a href="../login.jsp">Login</a> / <a href="../signup.jsp">Signup</a></p>
+    <p><a href="login">Login</a> / <a href="signup">Signup</a></p>
 </div>

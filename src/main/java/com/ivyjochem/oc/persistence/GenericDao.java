@@ -154,4 +154,7 @@ public class GenericDao<T> {
 
     }
 
+    public Logger getLogger() {
+        return logger;
+    }
 }
