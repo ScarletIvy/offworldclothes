@@ -9,7 +9,6 @@ import java.io.IOException;
 public class products extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("path", request.getContextPath() + "/css/styles.css");
         RequestDispatcher dispatcher = request.getRequestDispatcher("/products" +
                 ".jsp");
         dispatcher.forward(request, response);

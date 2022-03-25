@@ -1,8 +1,15 @@
 * {
-    font-family: 'Comfortaa', cursive;
+    font-family: "Red Hat Mono", sans-serif;
 }
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+nav ul li {
+    display: inline-block;
+    text-decoration: none;
+}
+nav ul li a {
+    text-decoration: none;
 }

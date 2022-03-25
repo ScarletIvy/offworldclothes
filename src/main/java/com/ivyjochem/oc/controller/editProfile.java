@@ -9,7 +9,6 @@ import java.io.IOException;
 public class editProfile extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("path", request.getContextPath() + "/css/styles.css");
         RequestDispatcher dispatcher = request.getRequestDispatcher("/editProfile" +
                 ".jsp");
         dispatcher.forward(request, response);
