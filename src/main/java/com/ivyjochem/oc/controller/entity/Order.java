@@ -1,4 +1,4 @@
-package com.ivyjochem.oc.entity;
+package com.ivyjochem.oc.controller.entity;
 
 import com.ivyjochem.oc.util.TimestampAttributeConverter;
 import lombok.Data;

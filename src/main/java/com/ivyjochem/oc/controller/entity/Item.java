@@ -1,4 +1,4 @@
-package com.ivyjochem.oc.entity;
+package com.ivyjochem.oc.controller.entity;
 
 import lombok.Data;
 import org.hibernate.annotations.Entity;

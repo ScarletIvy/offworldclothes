@@ -1,9 +1,6 @@
-package com.ivyjochem.oc.entity;
+package com.ivyjochem.oc.controller.entity;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.ToString;
-import org.hibernate.annotations.Entity;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;

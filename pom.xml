@@ -1,13 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>edu.matc.entjava.yourindieproject</groupId>
-  <artifactId>yourindieproject</artifactId>
+  <groupId>com.ivyjochem.oc</groupId>
+  <artifactId>oc</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>YourIndieProject Maven Webapp</name>
+  <name>OffwordClothes</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -15,7 +13,7 @@
     <junit.version>4.13.2</junit.version>
     <junit-vintage-version>5.8.2</junit-vintage-version>
     <javax.version>8.0.1</javax.version>
-    <mysql-version>8.0.25</mysql-version>
+    <mysql-version>8.0.28</mysql-version>
     <jstl-version>1.2</jstl-version>
     <log4j-version>2.10.0</log4j-version>
     <jupiter-version>5.8.2</jupiter-version>
@@ -81,31 +79,46 @@
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-core</artifactId>
-      <version>5.6.5.Final</version>
+      <version>5.6.7.Final</version>
     </dependency>
     <!-- c3p0 - used to handle connection pooling with hibernate -->
     <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0 -->
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-c3p0</artifactId>
-      <version>5.6.5.Final</version>
+      <version>5.6.7.Final</version>
     </dependency>
       <dependency>
           <groupId>org.projectlombok</groupId>
           <artifactId>lombok</artifactId>
-          <version>RELEASE</version>
+          <version>1.18.22</version>
           <scope>compile</scope>
       </dependency>
   </dependencies>
 
   <build>
-    <finalName>offworldclothes</finalName>
-    <pluginManagement>
+    <finalName>oc</finalName>
       <plugins>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>${maven-compiler-plugin-version}</version>
+          <configuration>
+            <source>1.8</source>
+            <target>1.8</target>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-war-plugin</artifactId>
+          <configuration>
+            <webResources>
+              <resource>
+                <directory>src/main/webapp/META-INF</directory>
+                <filtering>true</filtering>
+                <targetPath>META-INF</targetPath>
+              </resource>
+            </webResources>
+          </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
@@ -120,6 +133,11 @@
           </dependencies>
         </plugin>
       </plugins>
-    </pluginManagement>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
   </build>
 </project>
