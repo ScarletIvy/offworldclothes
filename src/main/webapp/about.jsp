@@ -8,6 +8,7 @@
 <jsp:include page="includes/contentType.jsp"/>
 <html>
 <head>
+
     <title>OffWorld Clothes - About</title>
     <jsp:include page="includes/head.jsp"/>
 </head>

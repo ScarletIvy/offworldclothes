@@ -17,7 +17,80 @@
 <jsp:include page="includes/header.jsp"/>
 <jsp:include page="includes/nav.jsp"/>
 <h2>Signup</h2>
+<form class="form-horizontal">
+    <fieldset>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="username">Username</label>
+            <div class="col-md-4">
+                <input id="username" name="username" type="text" placeholder="Username" class="form-control input-md" required="">
 
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="firstName">First Name</label>
+            <div class="col-md-4">
+                <input id="firstName" name="firstName" type="text" placeholder="First Name" class="form-control input-md" required="">
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="email">Email</label>
+            <div class="col-md-4">
+                <input id="email" name="email" type="text" placeholder="Email" class="form-control input-md" required="">
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="address">Street Address</label>
+            <div class="col-md-4">
+                <input id="address" name="address" type="text" placeholder="Street Address" class="form-control input-md" required="">
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="City">City</label>
+            <div class="col-md-4">
+                <input id="City" name="City" type="text" placeholder="City" class="form-control input-md" required="">
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="state">State</label>
+            <div class="col-md-4">
+                <input id="state" name="state" type="text" placeholder="State" class="form-control input-md" required="">
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="zip">Zip Code</label>
+            <div class="col-md-4">
+                <input id="zip" name="zip" type="text" placeholder="Zip Code" class="form-control input-md" required="">
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="password">Password</label>
+            <div class="col-md-4">
+                <input id="password" name="password" type="password" placeholder="Password" class="form-control input-md" required="">
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="repeatPassword">Repeat Password</label>
+            <div class="col-md-4">
+                <input id="repeatPassword" name="repeatPassword" type="password" placeholder="Repeated Password" class="form-control input-md" required="">
+                <span class="help-block">Passwords must match</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="signup"></label>
+            <div class="col-md-4">
+                <button id="signup" name="signup" class="btn btn-primary">Sign Up</button>
+            </div>
+        </div>
+
+    </fieldset>
+</form>
 <jsp:include page="includes/footer.jsp"/>
 </body>
 </html>
