@@ -17,9 +17,9 @@
         <property name="hibernate.c3p0.max_statements">50</property>
         <property name="hibernate.c3p0.idle_test_period">3000</property>
 
-        <mapping class="com.ivyjochem.oc.controller.entity.Item"/>
-        <mapping class="com.ivyjochem.oc.controller.entity.Order"/>
-        <mapping class="com.ivyjochem.oc.controller.entity.User"/>
+        <mapping class="com.ivyjochem.oc.controller.entity.item"/>
+        <mapping class="com.ivyjochem.oc.controller.entity.order"/>
+        <mapping class="com.ivyjochem.oc.controller.entity.user"/>
 
 
     </session-factory>

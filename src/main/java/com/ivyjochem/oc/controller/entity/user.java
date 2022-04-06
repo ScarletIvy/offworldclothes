@@ -7,11 +7,11 @@ import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 /**
- * The User.
+ * The user.
  */
 @Data
 @Entity
-public class User implements Serializable {
+public class user implements Serializable {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -32,7 +32,7 @@ public class User implements Serializable {
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
-    private Set<Order> orders = new HashSet<>();
+    private Set<order> orders = new HashSet<>();
 
 
     /**
@@ -40,9 +40,13 @@ public class User implements Serializable {
      *
      * @param order the order
      */
-    public void addOrder(Order order) {
+    public void addOrder(order order) {
         orders.add(order);
 
     }
 
+    @Override
+    public int hashCode() {
+        return getClass().hashCode();
+    }
 }

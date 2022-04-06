@@ -5,7 +5,10 @@
   Time: 10:49 PM
   To change this template use File | Settings | File Templates.
 --%>
-<div id="footer">
+
+<footer class="page-footer font-small">
     <hr>
-    Created By: Ivy Jochem | <a href="mailto:ejochem@madisoncollege.edu">ejochem@madisoncollege.edu</a>
-</div>
+    <div class="footer-copyright text-center py-3"> Created By: Ivy Jochem
+        <a href="mailto:ejochem@madisoncollege.edu">ejochem@madisoncollege.edu</a>
+    </div>
+</footer>

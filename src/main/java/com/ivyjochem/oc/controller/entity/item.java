@@ -1,17 +1,13 @@
 package com.ivyjochem.oc.controller.entity;
 
-import lombok.Data;
-import org.hibernate.annotations.Entity;
+import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Data
 @Entity
-public class Item implements Serializable {
+public class item implements Serializable {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)

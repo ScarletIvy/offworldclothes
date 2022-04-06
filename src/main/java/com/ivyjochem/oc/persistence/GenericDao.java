@@ -26,7 +26,7 @@ public class GenericDao<T> {
     /**
      * Instantiates a new Generic dao.
      *
-     * @param type the entity type, for example, User.
+     * @param type the entity type, for example, user.
      */
     public GenericDao(Class<T> type) {
         this.type = type;
