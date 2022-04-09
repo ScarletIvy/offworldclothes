@@ -2,5 +2,6 @@
 <project version="4">
   <component name="JpaBuddyIdeaProjectConfig" ddlActionDbType="mysql">
     <option name="defaultUnitInitialized" value="true" />
+    <option name="reverseEngineeringLastDbConnectionId" value="1ad19381-ba49-4327-a5d8-d63b24f08133" />
   </component>
 </project>

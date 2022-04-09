@@ -17,8 +17,7 @@
 <jsp:include page="includes/header.jsp"/>
 <jsp:include page="includes/nav.jsp"/>
 <h2>Signup</h2>
-<form class="form-horizontal">
-    <fieldset>
+<form class="form-horizontal" action="signupaction" method="post">
         <div class="form-group">
             <label class="col-md-4 control-label" for="username">Username</label>
             <div class="col-md-4">
@@ -30,7 +29,12 @@
             <label class="col-md-4 control-label" for="firstName">First Name</label>
             <div class="col-md-4">
                 <input id="firstName" name="firstName" type="text" placeholder="First Name" class="form-control input-md" required="">
-
+            </div>
+        </div>
+        <div class="form-group">
+             <label class="col-md-4 control-label" for="lastName">Last Name</label>
+             <div class="col-md-4">
+                <input id="lastName" name="lastName" type="text" placeholder="Last Name" class="form-control input-md" required="">
             </div>
         </div>
         <div class="form-group">
@@ -85,11 +89,9 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="signup"></label>
             <div class="col-md-4">
-                <button id="signup" name="signup" class="btn btn-primary">Sign Up</button>
+                <button type="submit" id="signup" name="signup" class="btn btn-primary">Sign Up</button>
             </div>
         </div>
-
-    </fieldset>
 </form>
 <jsp:include page="includes/footer.jsp"/>
 </body>

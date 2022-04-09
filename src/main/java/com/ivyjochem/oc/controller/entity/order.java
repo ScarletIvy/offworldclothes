@@ -32,14 +32,47 @@ public class order implements Serializable {
     @EqualsAndHashCode.Exclude
     private Set<item> items = new HashSet<>();
 
-    @ManyToOne(optional = false)
-    private user users;
+    @OneToOne(orphanRemoval = true)
+    @JoinColumn(name = "id")
+    private user user;
 
-    public user getUsers() {
-        return users;
+    public String getShippingAddress() {
+        return shippingAddress;
     }
 
-    public void setUsers(user users) {
-        this.users = users;
+    public void setShippingAddress(String shippingAddress) {
+        this.shippingAddress = shippingAddress;
+    }
+
+    public String getTotal() {
+        return total;
+    }
+
+    public void setTotal(String total) {
+        this.total = total;
+    }
+
+    public LocalDateTime getOrderDate() {
+        return orderDate;
+    }
+
+    public void setOrderDate(LocalDateTime orderDate) {
+        this.orderDate = orderDate;
+    }
+
+    public Set<item> getItems() {
+        return items;
+    }
+
+    public void setItems(Set<item> items) {
+        this.items = items;
+    }
+
+    public user getUser() {
+        return user;
+    }
+
+    public void setUser(user user) {
+        this.user = user;
     }
 }
