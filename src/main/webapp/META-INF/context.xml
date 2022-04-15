@@ -1,7 +1,7 @@
 <Context docBase="oc" path="/oc" reloadable="true">
     <Realm className="org.apache.catalina.realm.JDBCRealm"
            driverName="com.mysql.jdbc.Driver"
-           connectionURL= "jdbc:mysql://localhost:3306/oc"
+           connectionURL= "jdbc:mysql://localhost:3306/oc?user=root&amp;password=MySQL"
             userTable="user" userNameCol="userName" userCredCol="password">
 </Realm>
         </Context>
