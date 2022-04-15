@@ -15,9 +15,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarsToggle">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="products">Products</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="login">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="signup">Signup</a></li>
+                <li class="nav-item"><a class="nav-link" href="">Logout</a></li>
                 <li class="nav-item"><a class="nav-link" href="account">Account</a></li>
+                <li class="nav-item"><a class="nav-link" href="cart">Cart</a></li>
             </ul>
         </div>
     </div>

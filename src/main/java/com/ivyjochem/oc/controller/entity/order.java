@@ -27,7 +27,7 @@ public class order implements Serializable {
     @EqualsAndHashCode.Exclude
     private LocalDateTime orderDate;
 
-    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "user")
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     private Set<item> items = new HashSet<>();

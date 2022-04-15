@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Ivy
@@ -17,7 +18,11 @@
 <jsp:include page="includes/header.jsp"/>
 <jsp:include page="includes/nav.jsp"/>
 <h2>Our Products</h2>
-
+<div class="container">
+    <div class="row">
+        <div class="col"><a href="<c:url value="/viewProduct"/>"><img src="images/shirt.jpg" alt="shirt"></a></div>
+    </div>
+</div>
 <jsp:include page="includes/footer.jsp"/>
 </body>
 </html>
