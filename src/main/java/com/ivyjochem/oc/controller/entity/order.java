@@ -32,7 +32,7 @@ public class order implements Serializable {
     @EqualsAndHashCode.Exclude
     private Set<item> items = new HashSet<>();
 
-    @OneToOne(orphanRemoval = true)
+    @ManyToOne
     @JoinColumn(name = "id")
     private user user;
 

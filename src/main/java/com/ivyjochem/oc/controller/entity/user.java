@@ -28,6 +28,9 @@ public class user implements Serializable {
     private String city;
     private String state;
 
+    @OneToMany
+    private Set<order> orders = new LinkedHashSet<>();
+
     public String getLastName() {
         return lastName;
     }
@@ -99,9 +102,6 @@ public class user implements Serializable {
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
-
-    @OneToMany(mappedBy = "users", orphanRemoval = true)
-    private Set<order> orders = new LinkedHashSet<>();
 
     public Set<order> getOrders() {
         return orders;

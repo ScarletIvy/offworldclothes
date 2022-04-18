@@ -17,6 +17,14 @@ public class item implements Serializable {
     private String imageURL;
     private String description;
 
+    @ManyToOne
+    @JoinColumn(name = "id")
+    private order order;
+
+    public order getorder() {
+        return order;
+    }
+
     public String getSizes() {
         return sizes;
     }
