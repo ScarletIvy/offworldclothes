@@ -4,6 +4,8 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 /**
  * The type Item.
@@ -20,18 +22,23 @@ public class item implements Serializable {
     private String imageURL;
     private String description;
 
-    @ManyToOne
-    @JoinColumn(name = "id")
-    private order order;
+    @ManyToMany
+    @JoinTable(name = "orders")
+    private Set<order> orders = new LinkedHashSet<>();
+
+    public Set<order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(Set<order> orders) {
+        this.orders = orders;
+    }
 
     /**
      * Gets .
      *
      * @return the
      */
-    public order getorder() {
-        return order;
-    }
 
     /**
      * Gets sizes.

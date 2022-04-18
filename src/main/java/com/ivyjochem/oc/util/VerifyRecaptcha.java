@@ -21,7 +21,6 @@ public class VerifyRecaptcha {
     /**
      * The constant url.
      */
-//TODO put these in props file
     public static final String url = "https://www.google.com/recaptcha/api/siteverify";
     /**
      * The constant secret.

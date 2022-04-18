@@ -37,8 +37,8 @@ public class UserTest {
     public void setUp() throws Exception {
         dao = new GenericDao(user.class);
         databaseUtility = new DatabaseUtility();
-        databaseUtility.runSQL("cleandb.sql");
-        databaseUtility.runSQL("createTestData.sql");
+        databaseUtility.runSQL("clear.sql");
+        databaseUtility.runSQL("testData.sql");
         users = dao.getAll();
     }
 

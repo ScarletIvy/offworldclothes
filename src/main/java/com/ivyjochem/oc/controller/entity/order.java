@@ -32,14 +32,22 @@ public class order implements Serializable {
     @EqualsAndHashCode.Exclude
     private LocalDateTime orderDate;
 
-    @OneToMany(mappedBy = "user")
+    @ManyToMany(mappedBy = "orders", fetch = FetchType.LAZY)
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     private Set<item> items = new HashSet<>();
 
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "user")
     private user user;
+
+    public com.ivyjochem.oc.controller.entity.user getUser() {
+        return user;
+    }
+
+    public void setUser(com.ivyjochem.oc.controller.entity.user user) {
+        this.user = user;
+    }
 
     /**
      * Gets shipping address.
@@ -111,23 +119,5 @@ public class order implements Serializable {
      */
     public void setItems(Set<item> items) {
         this.items = items;
-    }
-
-    /**
-     * Gets user.
-     *
-     * @return the user
-     */
-    public user getUser() {
-        return user;
-    }
-
-    /**
-     * Sets user.
-     *
-     * @param user the user
-     */
-    public void setUser(user user) {
-        this.user = user;
     }
 }

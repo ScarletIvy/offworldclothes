@@ -1,0 +1,18 @@
+[ERROR] 2022-04-18 18:26:23.714 [main] DatabaseUtility - com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 215 milliseconds ago.  The last packet sent successfully to the server was 208 milliseconds ago.
+[ERROR] 2022-04-18 18:26:23.720 [main] DatabaseUtility - com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 1 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.
+[ERROR] 2022-04-18 18:29:48.442 [main] DatabaseUtility - com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 1 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.
+[ERROR] 2022-04-18 18:29:48.443 [main] DatabaseUtility - com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 0 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.
+[ERROR] 2022-04-18 18:33:09.636 [main] DatabaseUtility - com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 0 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.
+[ERROR] 2022-04-18 18:33:09.638 [main] DatabaseUtility - com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 1 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.

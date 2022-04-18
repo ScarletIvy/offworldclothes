@@ -27,7 +27,7 @@ public class DatabaseUtility {
     /**
      * The Db url.
      */
-    static final String DB_URL = "jdbc:mysql://localhost/OCTest";
+    static final String DB_URL = "jdbc:mysql://localhost:3306/octest?user=root&amp;password=MySQL";
 
     /**
      * The User.
@@ -50,23 +50,26 @@ public class DatabaseUtility {
         Statement stmt = null;
         ClassLoader classloader = Thread.currentThread().getContextClassLoader();
         InputStream inputStream = classloader.getResourceAsStream(sqlFile);
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(inputStream))) {
+        try {
+            assert inputStream != null;
+            try (BufferedReader br = new BufferedReader(new InputStreamReader(inputStream))) {
 
-            Class.forName("com.mysql.jdbc.Driver");
+                Class.forName("com.mysql.jdbc.Driver");
 
-            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+                conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
-            stmt = conn.createStatement();
+                stmt = conn.createStatement();
 
-            while (true) {
-                String sql = br.readLine();
-                if (sql == null) {
-                    break;
+                while (true) {
+                    String sql = br.readLine();
+                    if (sql == null) {
+                        break;
+                    }
+                    stmt.executeUpdate(sql);
+
                 }
-                stmt.executeUpdate(sql);
 
             }
-
         } catch (SQLException se) {
             logger.error(se);
         } catch (Exception e) {

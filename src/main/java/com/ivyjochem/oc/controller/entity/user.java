@@ -1,6 +1,8 @@
 package com.ivyjochem.oc.controller.entity;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -29,7 +31,9 @@ public class user implements Serializable {
     private String city;
     private String state;
 
-    @OneToMany
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     private Set<order> orders = new LinkedHashSet<>();
 
     /**
