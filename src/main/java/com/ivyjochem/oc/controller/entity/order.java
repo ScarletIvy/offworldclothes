@@ -1,7 +1,9 @@
 package com.ivyjochem.oc.controller.entity;
 
 import com.ivyjochem.oc.util.TimestampAttributeConverter;
-import lombok.*;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
@@ -11,6 +13,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 
+/**
+ * The type Order.
+ */
 @Data
 @Entity
 public class order implements Serializable {
@@ -36,42 +41,92 @@ public class order implements Serializable {
     @JoinColumn(name = "id")
     private user user;
 
+    /**
+     * Gets shipping address.
+     *
+     * @return the shipping address
+     */
     public String getShippingAddress() {
         return shippingAddress;
     }
 
+    /**
+     * Sets shipping address.
+     *
+     * @param shippingAddress the shipping address
+     */
     public void setShippingAddress(String shippingAddress) {
         this.shippingAddress = shippingAddress;
     }
 
+    /**
+     * Gets total.
+     *
+     * @return the total
+     */
     public String getTotal() {
         return total;
     }
 
+    /**
+     * Sets total.
+     *
+     * @param total the total
+     */
     public void setTotal(String total) {
         this.total = total;
     }
 
+    /**
+     * Gets order date.
+     *
+     * @return the order date
+     */
     public LocalDateTime getOrderDate() {
         return orderDate;
     }
 
+    /**
+     * Sets order date.
+     *
+     * @param orderDate the order date
+     */
     public void setOrderDate(LocalDateTime orderDate) {
         this.orderDate = orderDate;
     }
 
+    /**
+     * Gets items.
+     *
+     * @return the items
+     */
     public Set<item> getItems() {
         return items;
     }
 
+    /**
+     * Sets items.
+     *
+     * @param items the items
+     */
     public void setItems(Set<item> items) {
         this.items = items;
     }
 
+    /**
+     * Gets user.
+     *
+     * @return the user
+     */
     public user getUser() {
         return user;
     }
 
+    /**
+     * Sets user.
+     *
+     * @param user the user
+     */
     public void setUser(user user) {
         this.user = user;
     }

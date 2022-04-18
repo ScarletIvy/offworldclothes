@@ -4,9 +4,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import com.ivyjochem.oc.controller.entity.*;
-import com.ivyjochem.oc.persistence.*;
-import com.ivyjochem.oc.util.*;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
@@ -19,6 +16,7 @@ import java.util.Map;
 /**
  * A generic DAO somewhat inspired by http://rodrigouchoa.wordpress.com
  *
+ * @param <T> the type parameter
  */
 public class GenericDao<T> {
 
@@ -55,8 +53,10 @@ public class GenericDao<T> {
 
     /**
      * Gets an entity by id
-     * @param id entity id to search by
-     * @return entity
+     *
+     * @param <T> the type parameter
+     * @param id  entity id to search by
+     * @return entity by id
      */
     public <T> T getById(int id) {
         Session session = getSession();
@@ -83,6 +83,7 @@ public class GenericDao<T> {
      * Inserts the entity.
      *
      * @param entity entity to be inserted
+     * @return the int
      */
     public int insert(T entity) {
         int id;
@@ -110,9 +111,10 @@ public class GenericDao<T> {
 
     /**
      * Finds entities by one of its properties.
-
+     *
      * @param propertyName the property name.
-     * @param value the value by which to find.
+     * @param value        the value by which to find.
+     * @return the list
      */
     public List<T> findByPropertyEqual(String propertyName, Object value) {
         Session session = getSession();
@@ -127,11 +129,9 @@ public class GenericDao<T> {
     /**
      * Finds entities by multiple properties.
      * Inspired by https://stackoverflow.com/questions/11138118/really-dynamic-jpa-criteriabuilder
-
+     *
      * @param propertyMap property and value pairs
      * @return entities with properties equal to those passed in the map
-     *
-     *
      */
     public List<T> findByPropertyEqual(Map<String, Object> propertyMap) {
         Session session = getSession();
@@ -157,6 +157,11 @@ public class GenericDao<T> {
 
     }
 
+    /**
+     * Gets logger.
+     *
+     * @return the logger
+     */
     public Logger getLogger() {
         return logger;
     }

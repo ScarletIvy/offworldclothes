@@ -1,10 +1,13 @@
 package com.ivyjochem.oc.controller.entity;
 
-import lombok.*;
+import lombok.Data;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
+/**
+ * The type Item.
+ */
 @Data
 @Entity
 public class item implements Serializable {
@@ -21,38 +24,83 @@ public class item implements Serializable {
     @JoinColumn(name = "id")
     private order order;
 
+    /**
+     * Gets .
+     *
+     * @return the
+     */
     public order getorder() {
         return order;
     }
 
+    /**
+     * Gets sizes.
+     *
+     * @return the sizes
+     */
     public String getSizes() {
         return sizes;
     }
 
+    /**
+     * Sets sizes.
+     *
+     * @param sizes the sizes
+     */
     public void setSizes(String sizes) {
         this.sizes = sizes;
     }
 
+    /**
+     * Gets price.
+     *
+     * @return the price
+     */
     public String getPrice() {
         return price;
     }
 
+    /**
+     * Sets price.
+     *
+     * @param price the price
+     */
     public void setPrice(String price) {
         this.price = price;
     }
 
+    /**
+     * Gets image url.
+     *
+     * @return the image url
+     */
     public String getImageURL() {
         return imageURL;
     }
 
+    /**
+     * Sets image url.
+     *
+     * @param imageURL the image url
+     */
     public void setImageURL(String imageURL) {
         this.imageURL = imageURL;
     }
 
+    /**
+     * Gets description.
+     *
+     * @return the description
+     */
     public String getDescription() {
         return description;
     }
 
+    /**
+     * Sets description.
+     *
+     * @param description the description
+     */
     public void setDescription(String description) {
         this.description = description;
     }

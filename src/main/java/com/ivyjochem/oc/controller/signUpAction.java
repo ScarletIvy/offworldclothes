@@ -1,14 +1,20 @@
 package com.ivyjochem.oc.controller;
 
-import com.ivyjochem.oc.controller.entity.*;
-import com.ivyjochem.oc.persistence.*;
-import com.ivyjochem.oc.util.*;
+import com.ivyjochem.oc.controller.entity.user;
+import com.ivyjochem.oc.persistence.GenericDao;
+import com.ivyjochem.oc.util.DaoFactory;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * The type Sign up action.
+ */
 @WebServlet(name = "signupaction", value = "/signupaction")
 public class signUpAction extends HttpServlet {
 

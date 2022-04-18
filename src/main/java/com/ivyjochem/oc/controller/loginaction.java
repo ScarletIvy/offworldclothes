@@ -4,12 +4,19 @@ import com.ivyjochem.oc.controller.entity.user;
 import com.ivyjochem.oc.persistence.GenericDao;
 import com.ivyjochem.oc.util.DaoFactory;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.*;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
+/**
+ * The type Loginaction.
+ */
 @WebServlet(name = "loginaction", value = "/loginaction")
 public class loginaction extends HttpServlet {
 

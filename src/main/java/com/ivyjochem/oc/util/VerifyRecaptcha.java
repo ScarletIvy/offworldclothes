@@ -4,19 +4,37 @@ import javax.json.Json;
 import javax.json.JsonObject;
 import javax.json.JsonReader;
 import javax.net.ssl.HttpsURLConnection;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.InputStreamReader;
+import java.io.StringReader;
 import java.net.URL;
 
+/**
+ * The type Verify recaptcha.
+ */
 /*
  * Based on https://www.journaldev.com/7133/how-to-integrate-google-recaptcha-in-java-web-application
  */
 public class VerifyRecaptcha {
 
-    //TODO put these in props file
+    /**
+     * The constant url.
+     */
+//TODO put these in props file
     public static final String url = "https://www.google.com/recaptcha/api/siteverify";
+    /**
+     * The constant secret.
+     */
     public static final String secret = "6LetTgUAAAAABJamSZiHRDIDodBh-4l6I8fGNk";
     private final static String USER_AGENT = "Mozilla/5.0";
 
+    /**
+     * Verify boolean.
+     *
+     * @param gRecaptchaResponse the g recaptcha response
+     * @return the boolean
+     */
     public static boolean verify(String gRecaptchaResponse) {
         if (gRecaptchaResponse == null || "".equals(gRecaptchaResponse)) {
             return false;

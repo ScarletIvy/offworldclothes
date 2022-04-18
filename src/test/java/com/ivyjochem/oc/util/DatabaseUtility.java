@@ -4,7 +4,9 @@ package com.ivyjochem.oc.util;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -17,12 +19,24 @@ public class DatabaseUtility {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
 
+    /**
+     * The Jdbc driver.
+     */
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
 
+    /**
+     * The Db url.
+     */
     static final String DB_URL = "jdbc:mysql://localhost/OCTest";
 
+    /**
+     * The User.
+     */
     static final String USER = "root";
 
+    /**
+     * The Pass.
+     */
     static final String PASS = "MySQL";
 
 
