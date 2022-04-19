@@ -22,9 +22,29 @@ public class item implements Serializable {
     private String imageURL;
     private String description;
 
+    private String name;
+
     @ManyToMany
     @JoinTable(name = "orders")
     private Set<order> orders = new LinkedHashSet<>();
+
+    /**
+     * Gets orders.
+     *
+     * @return the orders
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * Sets orders.
+     *
+     * @param orders the orders
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
 
     /**
      * Gets orders.
