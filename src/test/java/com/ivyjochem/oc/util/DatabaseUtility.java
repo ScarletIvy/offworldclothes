@@ -27,7 +27,7 @@ public class DatabaseUtility {
     /**
      * The Db url.
      */
-    static final String DB_URL = "jdbc:mysql://localhost:3306/octest?user=root&amp;password=MySQL";
+    static final String DB_URL = "jdbc:mysql://localhost:3306/octest?user=root&password=MySQL";
 
     /**
      * The User.

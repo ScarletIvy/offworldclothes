@@ -4,31 +4,17 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="connection.url">jdbc:mysql://localhost:3306/octest?user=root&amp;password=MySQL&amp;useSSL=false&amp;allowPublicKeyRetrieval=true&amp;verifyServerCertificate=false&amp;autoReconnect=true</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/octest</property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="connection.username">root</property>
         <property name="connection.password">MySQL</property>
+        <property name="hibernate.hbm2ddl.import_files_sql_extractor">org.hibernate.tool.hbm2ddl.MultipleLinesSqlCommandExtractor</property>
         <property name="connection.useSSL">false</property>
         <property name="connection.verifyServerCertificate">false</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-        <!-- recreate the db before each test - based on hibernate annotations-->
-       <!--<property name="hbm2ddl.auto">create-drop</property>-->
-        <!--NOTE: to run additional sql before each test class, also add import.sql to test resources   -->
-        <property name="show_sql">true</property>
-        <property name="current_session_context_class">thread</property>
-        <property name="hbm2ddl.auto">create-drop</property>
-        <property name="hibernate.c3p0.min_size">5</property>
-        <property name="hibernate.c3p0.max_size">20</property>
-        <property name="hibernate.c3p0.timeout">300</property>
-        <property name="hibernate.c3p0.max_statements">50</property>
-        <property name="hibernate.c3p0.idle_test_period">3000</property>
-        <property name="hibernate.dbcp.initialSize">5</property>
-        <property name="hibernate.dbcp.maxTotal">20</property>
-        <property name="hibernate.dbcp.maxIdle">10</property>
-        <property name="hibernate.dbcp.minIdle">5</property>
+        <mapping class="com.ivyjochem.oc.controller.entity.user"/>
         <mapping class="com.ivyjochem.oc.controller.entity.item"/>
         <mapping class="com.ivyjochem.oc.controller.entity.order"/>
-        <mapping class="com.ivyjochem.oc.controller.entity.user"/>
     </session-factory>
 
 </hibernate-configuration>
