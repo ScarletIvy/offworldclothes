@@ -41,10 +41,20 @@ public class order implements Serializable {
     @JoinColumn(name = "user")
     private user user;
 
+    /**
+     * Gets user.
+     *
+     * @return the user
+     */
     public com.ivyjochem.oc.controller.entity.user getUser() {
         return user;
     }
 
+    /**
+     * Sets user.
+     *
+     * @param user the user
+     */
     public void setUser(com.ivyjochem.oc.controller.entity.user user) {
         this.user = user;
     }

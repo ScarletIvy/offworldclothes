@@ -26,10 +26,20 @@ public class item implements Serializable {
     @JoinTable(name = "orders")
     private Set<order> orders = new LinkedHashSet<>();
 
+    /**
+     * Gets orders.
+     *
+     * @return the orders
+     */
     public Set<order> getOrders() {
         return orders;
     }
 
+    /**
+     * Sets orders.
+     *
+     * @param orders the orders
+     */
     public void setOrders(Set<order> orders) {
         this.orders = orders;
     }

@@ -22,7 +22,7 @@ public class DatabaseUtility {
     /**
      * The Jdbc driver.
      */
-    static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+    static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
 
     /**
      * The Db url.
@@ -54,7 +54,7 @@ public class DatabaseUtility {
             assert inputStream != null;
             try (BufferedReader br = new BufferedReader(new InputStreamReader(inputStream))) {
 
-                Class.forName("com.mysql.jdbc.Driver");
+                Class.forName("com.mysql.cj.jdbc.Driver");
 
                 conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
