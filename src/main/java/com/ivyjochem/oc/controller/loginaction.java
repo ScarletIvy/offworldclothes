@@ -23,9 +23,10 @@ public class loginaction extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Map info = new HashMap<String,String>();
-        info.put(request.getParameter("username"),request.getParameter("password"));
-        GenericDao dao = DaoFactory.createDao(user.class);
+        Map<String, Object> info = new HashMap<String,Object>();
+        info.put("userName",request.getParameter("username"));
+        info.put("password",request.getParameter("password"));
+        GenericDao<? extends Object> dao = DaoFactory.createDao(user.class);
         List result = dao.findByPropertyEqual(info);
         if(!result.isEmpty()){
             RequestDispatcher dispatcher = request.getRequestDispatcher("/products" +
