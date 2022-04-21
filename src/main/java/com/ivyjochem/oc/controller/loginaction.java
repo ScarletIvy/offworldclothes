@@ -4,6 +4,7 @@ import com.ivyjochem.oc.controller.entity.user;
 import com.ivyjochem.oc.persistence.GenericDao;
 import com.ivyjochem.oc.util.DaoFactory;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,7 +28,12 @@ public class loginaction extends HttpServlet {
         GenericDao dao = DaoFactory.createDao(user.class);
         List result = dao.findByPropertyEqual(info);
         if(!result.isEmpty()){
-
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/products" +
+                    ".jsp");
+            dispatcher.forward(request, response);
+        }else{
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/error");
+            dispatcher.forward(request, response);
         }
     }
 }
