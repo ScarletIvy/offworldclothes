@@ -40,7 +40,7 @@ public class item implements Serializable {
     /**
      * Sets orders.
      *
-     * @param orders the orders
+     * @param name the orders
      */
     public void setName(String name) {
         this.name = name;
