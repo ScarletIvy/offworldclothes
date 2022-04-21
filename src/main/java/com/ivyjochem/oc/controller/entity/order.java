@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.NotFound;
+import org.hibernate.annotations.NotFoundAction;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -32,13 +34,14 @@ public class order implements Serializable {
     @EqualsAndHashCode.Exclude
     private LocalDateTime orderDate;
 
-    @ManyToMany(mappedBy = "orders", fetch = FetchType.LAZY)
+    @ManyToMany(mappedBy = "orders", fetch = FetchType.EAGER)
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     private Set<item> items = new HashSet<>();
 
     @ManyToOne
-    @JoinColumn(name = "user")
+    @JoinColumn(name="USER", referencedColumnName="ID")
+    @NotFound(action= NotFoundAction.IGNORE)
     private user user;
 
     /**

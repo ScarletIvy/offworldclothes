@@ -12,7 +12,6 @@ import javax.persistence.criteria.Root;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
 /**
  * A generic DAO somewhat inspired by http://rodrigouchoa.wordpress.com
  *
@@ -20,14 +19,14 @@ import java.util.Map;
  */
 public class GenericDao<T> {
 
-    private final Class<T> type;
+    private Class<T> type;
     private final Logger logger = LogManager.getLogger(this.getClass());
 
 
     /**
      * Instantiates a new Generic dao.
      *
-     * @param type the entity type, for example, user.
+     * @param type the entity type, for example, User.
      */
     public GenericDao(Class<T> type) {
         this.type = type;
@@ -53,10 +52,8 @@ public class GenericDao<T> {
 
     /**
      * Gets an entity by id
-     *
-     * @param <T> the type parameter
-     * @param id  entity id to search by
-     * @return entity by id
+     * @param id entity id to search by
+     * @return entity
      */
     public <T> T getById(int id) {
         Session session = getSession();
@@ -83,10 +80,9 @@ public class GenericDao<T> {
      * Inserts the entity.
      *
      * @param entity entity to be inserted
-     * @return the int
      */
     public int insert(T entity) {
-        int id;
+        int id = 0;
         Session session = getSession();
         Transaction transaction = session.beginTransaction();
         id = (int)session.save(entity);
@@ -111,10 +107,10 @@ public class GenericDao<T> {
 
     /**
      * Finds entities by one of its properties.
-     *
+
      * @param propertyName the property name.
-     * @param value        the value by which to find.
-     * @return the list
+     * @param value the value by which to find.
+     * @return
      */
     public List<T> findByPropertyEqual(String propertyName, Object value) {
         Session session = getSession();
@@ -129,20 +125,22 @@ public class GenericDao<T> {
     /**
      * Finds entities by multiple properties.
      * Inspired by https://stackoverflow.com/questions/11138118/really-dynamic-jpa-criteriabuilder
-     *
+
      * @param propertyMap property and value pairs
      * @return entities with properties equal to those passed in the map
+     *
+     *
      */
     public List<T> findByPropertyEqual(Map<String, Object> propertyMap) {
         Session session = getSession();
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<T> query = builder.createQuery(type);
         Root<T> root = query.from(type);
-        List<Predicate> predicates = new ArrayList<>();
-        for (Map.Entry<String, Object> entry: propertyMap.entrySet()) {
-            predicates.add(builder.equal(root.get(entry.getKey()), entry.getValue()));
+        List<Predicate> predicates = new ArrayList<Predicate>();
+        for (Map.Entry entry: propertyMap.entrySet()) {
+            predicates.add(builder.equal(root.get((String) entry.getKey()), entry.getValue()));
         }
-        query.select(root).where(builder.and(predicates.toArray(new Predicate[0])));
+        query.select(root).where(builder.and(predicates.toArray(new Predicate[predicates.size()])));
 
         return session.createQuery(query).getResultList();
     }
@@ -157,12 +155,4 @@ public class GenericDao<T> {
 
     }
 
-    /**
-     * Gets logger.
-     *
-     * @return the logger
-     */
-    public Logger getLogger() {
-        return logger;
-    }
 }

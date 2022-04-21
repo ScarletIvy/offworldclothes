@@ -17,6 +17,6 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.css">
 <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.js"></script>
-<link rel="icon" type="image/x-icon" href="images/favicon.ico">
-<link rel="stylesheet" href="css/styles.css">
+<link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/images/favicon.ico">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
 <script src="https://www.google.com/recaptcha/api.js"></script>

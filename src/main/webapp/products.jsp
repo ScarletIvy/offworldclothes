@@ -20,9 +20,10 @@
 <h2>Our Products</h2>
 <div class="container">
     <div class="row">
-    <c:forEach var="item" items="${items}">
-        <div class="col"><a href="<c:url value="/viewProduct"/>"><img src="${item.imageURL}" alt="${item.name}"></a></div>
-    </c:forEach>
+        <div class="col"><a href="<c:url value="/viewProduct/shirt"/>"><img class="img-fluid" src="images/shirt.png" alt="shirt"></a></div>
+        <div class="col"><a href="<c:url value="/viewProduct/hoodie"/>"><img class="img-fluid" src="images/hoodie.png" alt="hoodie"></a></div>
+        <div class="col"><a href="<c:url value="/viewProduct/pants"/>"><img class="img-fluid" src="images/pants.png" alt="pants"></a></div>
+        <div class="col"><a href="<c:url value="/viewProduct/skirt"/>"><img class="img-fluid" src="images/skirt.png" alt="skirt"></a></div>
     </div>
 </div>
 <jsp:include page="includes/footer.jsp"/>

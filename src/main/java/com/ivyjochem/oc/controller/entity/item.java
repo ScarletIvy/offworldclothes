@@ -1,6 +1,8 @@
 package com.ivyjochem.oc.controller.entity;
 
 import lombok.Data;
+import org.hibernate.annotations.NotFound;
+import org.hibernate.annotations.NotFoundAction;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -24,8 +26,9 @@ public class item implements Serializable {
 
     private String name;
 
-    @ManyToMany
-    @JoinTable(name = "orders")
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinColumn(name="ORDER", referencedColumnName="ID")
+    @NotFound(action= NotFoundAction.IGNORE)
     private Set<order> orders = new LinkedHashSet<>();
 
     /**
