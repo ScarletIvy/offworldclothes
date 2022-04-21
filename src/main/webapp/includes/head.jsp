@@ -19,4 +19,3 @@
 <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.js"></script>
 <link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/images/favicon.ico">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
-<script src="https://www.google.com/recaptcha/api.js"></script>
