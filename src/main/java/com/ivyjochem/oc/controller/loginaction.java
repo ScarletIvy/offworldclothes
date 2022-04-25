@@ -29,11 +29,13 @@ public class loginaction extends HttpServlet {
         GenericDao<? extends Object> dao = DaoFactory.createDao(user.class);
         List result = dao.findByPropertyEqual(info);
         if(!result.isEmpty()){
+            request.setAttribute("loggedIn", true);
+            request.setAttribute("loggedUser", result.get(0));
             RequestDispatcher dispatcher = request.getRequestDispatcher("/products" +
                     ".jsp");
             dispatcher.forward(request, response);
         }else{
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/error");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("error");
             dispatcher.forward(request, response);
         }
     }

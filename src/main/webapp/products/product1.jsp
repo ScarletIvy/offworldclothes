@@ -40,7 +40,8 @@
                 </select>
             </div>
         </div>
-
+        <br>
+        <p class="price" value="1">$1.00</p>
         <div class="form-group">
             <label class="col-md-4 control-label" for="addToCart"></label>
             <div class="col-md-4">

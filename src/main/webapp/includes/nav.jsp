@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Ivy
@@ -18,11 +19,17 @@
                 <li class="nav-item"><a class="nav-link" href="products">Products</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact">Contact</a></li>
                 <li class="nav-item"><a class="nav-link" href="about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="login">Login</a></li>
-                <li class="nav-item"><a class="nav-link" href="signup">Signup</a></li>
-                <li class="nav-item"><a class="nav-link" href="">Logout</a></li>
-                <li class="nav-item"><a class="nav-link" href="account">Account</a></li>
-                <li class="nav-item"><a class="nav-link" href="cart">Cart</a></li>
+                <c:choose>
+                    <c:when test="${loggedIn == 'false'}">
+                        <li class="nav-item"><a class="nav-link" href="login">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="signup">Signup</a></li>
+                    </c:when>
+                    <c:when test="${loggedIn == 'true'}">
+                        <li class="nav-item"><a class="nav-link" href="logout">Logout</a></li>
+                        <li class="nav-item"><a class="nav-link" href="account">Account</a></li>
+                        <li class="nav-item"><a class="nav-link" href="cart">Cart</a></li>
+                    </c:when>
+                </c:choose>
             </ul>
         </div>
     </div>
