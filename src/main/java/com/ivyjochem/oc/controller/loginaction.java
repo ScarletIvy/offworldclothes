@@ -35,7 +35,7 @@ public class loginaction extends HttpServlet {
             request.setAttribute("loggedUser", result.get(0));
             session.setAttribute("loggedIn", true);
             session.setAttribute("loggedUser", result.get(0));
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/products" +
+            RequestDispatcher dispatcher = request.getRequestDispatcher("products" +
                     ".jsp");
             dispatcher.forward(request, response);
         }else{

@@ -9,25 +9,25 @@
 
 <div class="navbar navbar-expand-md navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="home">Home</a>
+        <a class="navbar-brand" href="${pageContext.request.contextPath}/home">Home</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarsToggle">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarsToggle">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="products">Products</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/products">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/about">About</a></li>
                 <c:choose>
                     <c:when test="${loggedIn == true}">
-                        <li class="nav-item"><a class="nav-link" href="logout">Logout</a></li>
-                        <li class="nav-item"><a class="nav-link" href="account">Account</a></li>
-                        <li class="nav-item"><a class="nav-link" href="cart">Cart</a></li>
+                        <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/logout">Logout</a></li>
+                        <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/account">Account</a></li>
+                        <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/cart">Cart</a></li>
                     </c:when>
                     <c:otherwise>
-                        <li class="nav-item"><a class="nav-link" href="login">Login</a></li>
-                        <li class="nav-item"><a class="nav-link" href="signup">Signup</a></li>
+                        <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/login">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/signup">Signup</a></li>
                     </c:otherwise>
                 </c:choose>
             </ul>

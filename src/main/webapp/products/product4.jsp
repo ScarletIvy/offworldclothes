@@ -19,7 +19,7 @@
 <div class="container">
     <h2 class="row-2 text-center">Skirt</h2>
     <div class="row">
-        <img class="col img-fluid" src="../images/skirt.png" alt="skirt">
+        <img class="col img-fluid" src="${pageContext.request.contextPath}/images/skirt.png" alt="skirt">
         <div class="container col">
             <p class="row">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut eros laoreet, suscipit enim
                 eu, congue risus. Vivamus convallis leo sed lacus sagittis, vitae condimentum enim vulputate. In

@@ -17,7 +17,7 @@
 <jsp:include page="includes/header.jsp"/>
 <jsp:include page="includes/nav.jsp"/>
 <h2>Signup</h2>
-<form class="form-horizontal" action="/signupaction" method="post">
+<form class="form-horizontal" action="signupaction" method="post">
         <div class="form-group">
             <label class="col-md-4 control-label" for="username">Username</label>
             <div class="col-md-4">

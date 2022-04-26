@@ -15,7 +15,7 @@ import java.io.IOException;
 public class signup extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/signup" +
+        RequestDispatcher dispatcher = request.getRequestDispatcher("signup" +
                 ".jsp");
         dispatcher.forward(request, response);
     }

@@ -29,7 +29,7 @@ public class landing extends HttpServlet {
         session.setAttribute("cart", cart);
         session.setAttribute("loggedIn", loggedIn);
         session.setAttribute("loggedUser", loggedUser);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/home");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("home");
         dispatcher.forward(request, response);
     }
 

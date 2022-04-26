@@ -15,7 +15,7 @@ import java.io.IOException;
 public class contact extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/contact" +
+        RequestDispatcher dispatcher = request.getRequestDispatcher("contact" +
                 ".jsp");
         dispatcher.forward(request, response);
     }

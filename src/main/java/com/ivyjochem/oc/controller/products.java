@@ -19,7 +19,7 @@ public class products extends HttpServlet {
     private final Logger logger = LogManager.getLogger(this.getClass());
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/products" +
+        RequestDispatcher dispatcher = request.getRequestDispatcher("products" +
                 ".jsp");
         dispatcher.forward(request, response);
     }

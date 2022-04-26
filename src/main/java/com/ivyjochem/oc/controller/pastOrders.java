@@ -15,7 +15,7 @@ import java.io.IOException;
 public class pastOrders extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/accountTools/pastOrders" +
+        RequestDispatcher dispatcher = request.getRequestDispatcher("accountTools/pastOrders" +
                 ".jsp");
         dispatcher.forward(request, response);
     }

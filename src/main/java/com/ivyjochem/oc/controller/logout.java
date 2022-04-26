@@ -21,7 +21,7 @@ public class logout extends HttpServlet {
         request.setAttribute("loggedUser", null);
         session.setAttribute("loggedIn", false);
         session.setAttribute("loggedUser", null);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/landing");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("landing");
         dispatcher.forward(request, response);
     }
 

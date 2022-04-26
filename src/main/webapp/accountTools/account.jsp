@@ -17,24 +17,13 @@
 <jsp:include page="../includes/header.jsp"/>
 <jsp:include page="../includes/nav.jsp"/>
 <h2>Account</h2>
-<form class="form-horizontal" action="editProfile" method="post">
-    <fieldset>
-        <div class="form-group">
             <div class="col-md-4">
-                <button id="edit" type="submit" name="edit" class="btn btn-primary">Edit Profile</button>
+                <a href="${pageContext.request.contextPath}/editProfile"><button id="edit" type="submit" name="edit" class="btn btn-primary">Edit Profile</button></a>
             </div>
-        </div>
-    </fieldset>
-</form>
-<form class="form-horizontal" action="pastOrders" method="post">
-    <fieldset>
-        <div class="form-group">
+<br>
             <div class="col-md-4">
-                <button id="orders" type="submit" name="orders" class="btn btn-primary">Past Orders</button>
+                <a href="${pageContext.request.contextPath}/pastOrders"><button id="orders" type="submit" name="orders" class="btn btn-primary">Past Orders</button></a>
             </div>
-        </div>
-    </fieldset>
-</form>
 <jsp:include page="../includes/footer.jsp"/>
 </body>
 </html>

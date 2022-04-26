@@ -15,7 +15,7 @@ import java.io.IOException;
 public class authenticationError extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/authenticationError" +
+        RequestDispatcher dispatcher = request.getRequestDispatcher("authenticationError" +
                 ".jsp");
         dispatcher.forward(request, response);
     }
