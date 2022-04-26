@@ -7,6 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +25,10 @@ public class landing extends HttpServlet {
         request.setAttribute("cart", cart);
         request.setAttribute("loggedIn", loggedIn);
         request.setAttribute("loggedUser", loggedUser);
+        HttpSession session = request.getSession(true);
+        session.setAttribute("cart", cart);
+        session.setAttribute("loggedIn", loggedIn);
+        session.setAttribute("loggedUser", loggedUser);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/home");
         dispatcher.forward(request, response);
     }

@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
@@ -23,6 +24,7 @@ public class loginaction extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        HttpSession session = request.getSession(true);
         Map<String, Object> info = new HashMap<String,Object>();
         info.put("userName",request.getParameter("username"));
         info.put("password",request.getParameter("password"));
@@ -31,6 +33,8 @@ public class loginaction extends HttpServlet {
         if(!result.isEmpty()){
             request.setAttribute("loggedIn", true);
             request.setAttribute("loggedUser", result.get(0));
+            session.setAttribute("loggedIn", true);
+            session.setAttribute("loggedUser", result.get(0));
             RequestDispatcher dispatcher = request.getRequestDispatcher("/products" +
                     ".jsp");
             dispatcher.forward(request, response);
