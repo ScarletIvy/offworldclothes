@@ -36,6 +36,8 @@
 /target/
 /log/
 /lib/
+/logs/hibernate.log
+/logs/oc.log
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
@@ -48,6 +50,4 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 fabric.properties!/logs/
-/logs
-/logs/hibernate.log
-/logs/oc.log
+
