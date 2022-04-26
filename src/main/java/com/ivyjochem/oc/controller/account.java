@@ -15,7 +15,7 @@ import java.io.IOException;
 public class account extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/account" +
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/accountTools/account" +
                 ".jsp");
         dispatcher.forward(request, response);
     }

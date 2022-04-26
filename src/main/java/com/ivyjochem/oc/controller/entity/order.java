@@ -3,7 +3,6 @@ package com.ivyjochem.oc.controller.entity;
 import com.ivyjochem.oc.util.TimestampAttributeConverter;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.ToString;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.NotFound;
 import org.hibernate.annotations.NotFoundAction;
@@ -11,8 +10,8 @@ import org.hibernate.annotations.NotFoundAction;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -34,10 +33,8 @@ public class order implements Serializable {
     @EqualsAndHashCode.Exclude
     private LocalDateTime orderDate;
 
-    @ManyToMany(mappedBy = "orders", fetch = FetchType.EAGER)
-    @ToString.Exclude
-    @EqualsAndHashCode.Exclude
-    private Set<item> items = new HashSet<>();
+    @ElementCollection
+    private List<String> items = new ArrayList<String>();
 
     @ManyToOne
     @JoinColumn(name="USER", referencedColumnName="ID")
@@ -121,7 +118,7 @@ public class order implements Serializable {
      *
      * @return the items
      */
-    public Set<item> getItems() {
+    public List<String> getItems() {
         return items;
     }
 
@@ -130,7 +127,7 @@ public class order implements Serializable {
      *
      * @param items the items
      */
-    public void setItems(Set<item> items) {
+    public void setItems(List<String> items) {
         this.items = items;
     }
 }

@@ -15,7 +15,7 @@ import java.io.IOException;
 public class editProfile extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/editProfile" +
+        RequestDispatcher dispatcher = request.getRequestDispatcher(request.getContextPath() + "/accountTools/editProfile" +
                 ".jsp");
         dispatcher.forward(request, response);
     }

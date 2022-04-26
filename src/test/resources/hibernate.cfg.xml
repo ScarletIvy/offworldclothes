@@ -13,7 +13,6 @@
         <property name="connection.verifyServerCertificate">false</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
         <mapping class="com.ivyjochem.oc.controller.entity.user"/>
-        <mapping class="com.ivyjochem.oc.controller.entity.item"/>
         <mapping class="com.ivyjochem.oc.controller.entity.order"/>
     </session-factory>
 
