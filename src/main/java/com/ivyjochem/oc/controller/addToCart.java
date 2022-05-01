@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 /**
- * The type Account.
+ * The type Add to cart.
  */
 @WebServlet(name = "addToCart", value = "/addToCart")
 public class addToCart extends HttpServlet {

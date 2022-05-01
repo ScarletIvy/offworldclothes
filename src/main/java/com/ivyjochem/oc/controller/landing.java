@@ -1,6 +1,7 @@
 package com.ivyjochem.oc.controller;
 
 import com.ivyjochem.oc.controller.entity.user;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * The type Login.
+ * The type Landing.
  */
 @WebServlet(name = "landing", value = "/landing")
 public class landing extends HttpServlet {

@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
- * The type Edit profile.
+ * The type Edit action.
  */
 @WebServlet(name = "editaction", value = "/editaction")
 public class editAction extends HttpServlet {

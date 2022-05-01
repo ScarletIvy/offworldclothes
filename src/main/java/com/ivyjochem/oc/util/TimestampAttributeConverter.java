@@ -6,10 +6,7 @@ import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 /**
- * Convert from sqlDate to LocalDate. This will be used by Hibernate.
- * Class based on: http://www.thoughts-on-java.org/persist-localdate-localdatetime-jpa/
- *
- * @author pwaite
+ * The type Timestamp attribute converter.
  */
 @Converter(autoApply = true)
 public class TimestampAttributeConverter implements AttributeConverter<LocalDateTime, Timestamp> {

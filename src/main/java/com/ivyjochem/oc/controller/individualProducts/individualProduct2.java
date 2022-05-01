@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * The type Individual product.
+ * The type Individual product 2.
  */
 @WebServlet(name = "individualProduct2", value = "/viewProduct/hoodie")
 public class individualProduct2 extends HttpServlet {

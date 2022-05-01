@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * The type Edit profile.
+ * The type Past orders.
  */
 @WebServlet(name = "pastOrders", value = "/pastOrders")
 public class pastOrders extends HttpServlet {

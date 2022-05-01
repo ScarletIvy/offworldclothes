@@ -10,7 +10,7 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 /**
- * The user.
+ * The type User.
  */
 @Data
 @Entity
@@ -217,7 +217,7 @@ public class user implements Serializable {
     }
 
     /**
-     * Add an order.
+     * Add order.
      *
      * @param order the order
      */

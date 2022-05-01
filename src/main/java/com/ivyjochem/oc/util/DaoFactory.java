@@ -3,7 +3,7 @@ package com.ivyjochem.oc.util;
 import com.ivyjochem.oc.persistence.GenericDao;
 
 /**
- * Created by paulawaite on 4/28/16.
+ * The type Dao factory.
  */
 public class DaoFactory {
 

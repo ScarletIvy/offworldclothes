@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * The type Contact.
+ * The type Checkout.
  */
 @WebServlet(name = "checkout", value = "/checkout")
 public class checkout extends HttpServlet {

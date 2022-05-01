@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * A generic DAO somewhat inspired by http://rodrigouchoa.wordpress.com
+ * The type Generic dao.
  *
  * @param <T> the type parameter
  */
@@ -27,16 +27,16 @@ public class GenericDao<T> {
     /**
      * Instantiates a new Generic dao.
      *
-     * @param type the entity type, for example, User.
+     * @param type the type
      */
     public GenericDao(Class<T> type) {
         this.type = type;
     }
 
     /**
-     * Gets all entities
+     * Gets all.
      *
-     * @return the all entities
+     * @return the all
      */
     public List<T> getAll() {
         Session session = getSession();
@@ -52,11 +52,11 @@ public class GenericDao<T> {
     }
 
     /**
-     * Gets an entity by id
+     * Gets by id.
      *
      * @param <T> the type parameter
-     * @param id  entity id to search by
-     * @return entity by id
+     * @param id  the id
+     * @return the by id
      */
     public <T> T getById(int id) {
         Session session = getSession();
@@ -66,9 +66,9 @@ public class GenericDao<T> {
     }
 
     /**
-     * Deletes the entity.
+     * Delete.
      *
-     * @param entity entity to be deleted
+     * @param entity the entity
      */
     public void delete(T entity) {
         Session session = getSession();
@@ -80,9 +80,9 @@ public class GenericDao<T> {
 
 
     /**
-     * Inserts the entity.
+     * Insert int.
      *
-     * @param entity entity to be inserted
+     * @param entity the entity
      * @return the int
      */
     public int insert(T entity) {
@@ -96,9 +96,9 @@ public class GenericDao<T> {
     }
 
     /**
-     * Inserts or updates the entity.
+     * Save or update.
      *
-     * @param entity entity to be inserted/saved
+     * @param entity the entity
      */
     public void saveOrUpdate(T entity) {
         Session session = getSession();
@@ -110,11 +110,11 @@ public class GenericDao<T> {
 
 
     /**
-     * Finds entities by one of its properties.
+     * Find by property equal list.
      *
-     * @param propertyName the property name.
-     * @param value        the value by which to find.
-     * @return list
+     * @param propertyName the property name
+     * @param value        the value
+     * @return the list
      */
     public List<T> findByPropertyEqual(String propertyName, Object value) {
         Session session = getSession();
@@ -127,11 +127,10 @@ public class GenericDao<T> {
     }
 
     /**
-     * Finds entities by multiple properties.
-     * Inspired by https://stackoverflow.com/questions/11138118/really-dynamic-jpa-criteriabuilder
+     * Find by property equal list.
      *
-     * @param propertyMap property and value pairs
-     * @return entities with properties equal to those passed in the map
+     * @param propertyMap the property map
+     * @return the list
      */
     public List<T> findByPropertyEqual(Map<String, Object> propertyMap) {
         Session session = getSession();
@@ -148,10 +147,6 @@ public class GenericDao<T> {
     }
 
 
-    /**
-     * Returns an open session from the SessionFactory
-     * @return session
-     */
     private Session getSession() {
         return SessionFactoryProvider.getSessionFactory().openSession();
 
