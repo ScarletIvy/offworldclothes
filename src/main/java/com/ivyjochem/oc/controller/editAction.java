@@ -17,16 +17,20 @@ import java.io.IOException;
 @WebServlet(name = "editaction", value = "/editaction")
 public class editAction extends HttpServlet {
     @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    }
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession(true);
         user oldUser = (user) session.getAttribute("loggedUser");
         user newUser = (user) session.getAttribute("loggedUser");
-        RequestDispatcher dispatcher = request.getRequestDispatcher("home");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("index" + ".jsp");
         if(oldUser == newUser){
             dispatcher.forward(request, response);
         } else {
             dispatcher.forward(request, response);
         }
     }
+
 }
 

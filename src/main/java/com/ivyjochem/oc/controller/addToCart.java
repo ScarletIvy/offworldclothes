@@ -13,9 +13,11 @@ import java.util.ArrayList;
 /**
  * The type Account.
  */
-@WebServlet(name = "addToCart", value = "/AddToCart")
+@WebServlet(name = "addToCart", value = "/addToCart")
 public class addToCart extends HttpServlet {
-
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession(true);
@@ -31,7 +33,7 @@ public class addToCart extends HttpServlet {
         session.setAttribute("prices", prices);
         session.setAttribute("sizes", sizes);
         session.setAttribute("imgs", imgs);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("cart");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("cart" + ".jsp");
         dispatcher.forward(request, response);
     }
 }

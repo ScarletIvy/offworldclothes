@@ -28,12 +28,12 @@
         elementum tellus lorem id ipsum. Duis eget tristique ante. Maecenas fermentum facilisis elit, a iaculis odio
         sagittis eget. In vel tempus ante, ut auctor nisl. Mauris erat nibh, tincidunt nec tortor sit amet, mattis
         consequat arcu. Maecenas diam risus, pharetra eu lobortis eget, luctus volutpat justo.</p>
-      <form class="form-horizontal row">
+      <form class="form-horizontal row" action="addToCart" method="post">
         <fieldset>
           <div class="form-group">
-            <label class="col-md-4 control-label" for="Sizes">Sizes</label>
+            <label class="col-md-4 control-label" for="size">Sizes</label>
             <div class="col-md-4">
-              <select id="Sizes" name="Sizes" class="form-control">
+              <select id="size" name="size" class="form-control size">
                 <option value="S">Small</option>
                 <option value="M">Medium</option>
                 <option value="L">Large</option>
@@ -41,11 +41,13 @@
             </div>
           </div>
           <br>
-          <p class="price" value="1">$1.00</p>
+          <p>$1.00</p>
+          <input type="hidden" id="name" name="name" class="name" value="hoodie">
+          <input type="hidden" id="price" name="price" class="price" value="1">
+          <input type="hidden" id="img" name="img" class="img" value="${pageContext.request.contextPath}/images/hoodie.png">
           <div class="form-group">
-            <label class="col-md-4 control-label" for="addToCart"></label>
             <div class="col-md-4">
-              <button id="addToCart" name="addToCart" class="btn btn-primary">Add To Cart</button>
+              <button id="add" type="submit" name="add" class="btn btn-primary">Add To Cart</button>
             </div>
           </div>
         </fieldset>

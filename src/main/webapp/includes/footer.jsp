@@ -5,7 +5,7 @@
   Time: 10:49 PM
   To change this template use File | Settings | File Templates.
 --%>
-
+</div>
 <footer class="page-footer font-small">
     <hr>
     <div class="footer-copyright text-center py-3"> Created By: Ivy Jochem

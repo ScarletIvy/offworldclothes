@@ -17,7 +17,7 @@
 <jsp:include page="includes/header.jsp"/>
 <jsp:include page="includes/nav.jsp"/>
 <h2>Login</h2>
-<form class="form-horizontal" action="loginaction" method="post">
+<form class="form-horizontal" action="${pageContext.request.contextPath}/loginaction" method="post">
     <fieldset>
         <div class="form-group">
             <label class="col-md-4 control-label" for="username">Username</label>

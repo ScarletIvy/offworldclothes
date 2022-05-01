@@ -21,6 +21,9 @@ import java.util.Map;
  */
 @WebServlet(name = "loginaction", value = "/loginaction")
 public class loginaction extends HttpServlet {
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -35,7 +38,7 @@ public class loginaction extends HttpServlet {
             request.setAttribute("loggedUser", result.get(0));
             session.setAttribute("loggedIn", true);
             session.setAttribute("loggedUser", result.get(0));
-            RequestDispatcher dispatcher = request.getRequestDispatcher("products" +
+            RequestDispatcher dispatcher = request.getRequestDispatcher("index" +
                     ".jsp");
             dispatcher.forward(request, response);
         }else{
