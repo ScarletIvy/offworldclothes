@@ -19,8 +19,4 @@ public class signup extends HttpServlet {
                 ".jsp");
         dispatcher.forward(request, response);
     }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    }
 }

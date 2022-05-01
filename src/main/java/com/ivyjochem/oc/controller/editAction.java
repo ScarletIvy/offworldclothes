@@ -9,14 +9,14 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * The type Cart.
+ * The type Edit profile.
  */
-@WebServlet(name = "cart", value = "/cart")
-public class cart extends HttpServlet {
+@WebServlet(name = "editaction", value = "/editaction")
+public class editAction extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("cart" +
-                ".jsp");
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("home");
         dispatcher.forward(request, response);
     }
 }
+
