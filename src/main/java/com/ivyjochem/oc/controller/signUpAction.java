@@ -48,7 +48,7 @@ public class signUpAction extends HttpServlet {
             RequestDispatcher dispatcher = request.getRequestDispatcher("index" + ".jsp");
             dispatcher.forward(request, response);
         } else {
-            RequestDispatcher dispatcher = request.getRequestDispatcher("error");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("error" + ".jsp");
             dispatcher.forward(request, response);
         }
     }

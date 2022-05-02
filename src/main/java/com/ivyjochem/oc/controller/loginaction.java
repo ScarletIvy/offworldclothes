@@ -42,7 +42,7 @@ public class loginaction extends HttpServlet {
                     ".jsp");
             dispatcher.forward(request, response);
         }else{
-            RequestDispatcher dispatcher = request.getRequestDispatcher("error");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("authenticationError" + ".jsp");
             dispatcher.forward(request, response);
         }
     }

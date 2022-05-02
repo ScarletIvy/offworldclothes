@@ -144,6 +144,7 @@ public class GenericDao<T> {
         query.select(root).where(builder.and(predicates.toArray(new Predicate[predicates.size()])));
 
         return session.createQuery(query).getResultList();
+
     }
 
 
