@@ -24,15 +24,15 @@ public class addToCart extends HttpServlet {
         ArrayList cart = (ArrayList)session.getAttribute("cart");
         ArrayList prices = (ArrayList)session.getAttribute("prices");
         ArrayList sizes = (ArrayList)session.getAttribute("sizes");
-        ArrayList imgs = (ArrayList)session.getAttribute("imgs");
+        int total = (int)session.getAttribute("total");
         cart.add(request.getParameter("name"));
         prices.add(request.getParameter("price"));
         sizes.add(request.getParameter("size"));
-        imgs.add(request.getParameter("img"));
+        total += Integer.parseInt(request.getParameter("price"));
         session.setAttribute("cart", cart);
         session.setAttribute("prices", prices);
         session.setAttribute("sizes", sizes);
-        session.setAttribute("imgs", imgs);
+        session.setAttribute("total", total);
         RequestDispatcher dispatcher = request.getRequestDispatcher("cart" + ".jsp");
         dispatcher.forward(request, response);
     }

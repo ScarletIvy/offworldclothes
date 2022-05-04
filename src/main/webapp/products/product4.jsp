@@ -28,7 +28,7 @@
                 elementum tellus lorem id ipsum. Duis eget tristique ante. Maecenas fermentum facilisis elit, a iaculis odio
                 sagittis eget. In vel tempus ante, ut auctor nisl. Mauris erat nibh, tincidunt nec tortor sit amet, mattis
                 consequat arcu. Maecenas diam risus, pharetra eu lobortis eget, luctus volutpat justo.</p>
-            <form class="form-horizontal row" action="addToCart" method="post">
+            <form class="form-horizontal row" action="${pageContext.request.contextPath}/addToCart" method="post">
                 <fieldset>
                     <div class="form-group">
                         <label class="col-md-4 control-label" for="size">Sizes</label>

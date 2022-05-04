@@ -1,3 +1,7 @@
 * {
     font-family: "Red Hat Mono", sans-serif;
 }
+.cartItem {
+    width: 20px;
+    height: auto;
+}

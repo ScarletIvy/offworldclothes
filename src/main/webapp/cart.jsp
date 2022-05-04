@@ -18,15 +18,41 @@
 <jsp:include page="includes/header.jsp"/>
 <jsp:include page="includes/nav.jsp"/>
 <h2>Cart</h2>
-<form class="form-horizontal" action="checkout" method="post">
+<form class="form-horizontal container" action="checkout" method="post">
 <c:choose>
     <c:when test="${cart.size() == 0}">
         <h3>Your cart is empty</h3>
     </c:when>
     <c:otherwise>
-        <h3>Your cart is not empty</h3>
+    <div class="row">
+        <div class="col">
+            <p><strong>Product:</strong></p>
+            <ul class="list-unstyled">
+            <c:forEach var="item" items="${cart}">
+                <li>${item}</li>
+            </c:forEach>
+            </ul>
+        </div>
+        <div class="col">
+            <p><strong>Size:</strong></p>
+            <ul class="list-unstyled">
+                <c:forEach var="size" items="${sizes}">
+                    <li>${size}</li>
+                </c:forEach>
+            </ul>
+        </div>
+        <div class="col">
+            <p><strong>Price:</strong></p>
+            <ul class="list-unstyled">
+                <c:forEach var="price" items="${prices}">
+                    <li>$${price}.00</li>
+                </c:forEach>
+            </ul>
+        </div>
+    </div>
     <div class="form-group">
         <label class="col-md-4 control-label" for="checkout"></label>
+        <p><strong>Total: </strong>$${total}.00</p>
         <div class="col-md-4">
             <button id="checkout" type="submit" name="checkout" class="btn btn-primary">Check Out</button>
         </div>
