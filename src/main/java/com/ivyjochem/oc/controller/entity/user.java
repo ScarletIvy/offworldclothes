@@ -1,13 +1,9 @@
 package com.ivyjochem.oc.controller.entity;
 
 import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.ToString;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.LinkedHashSet;
-import java.util.Set;
 
 /**
  * The type User.
@@ -30,11 +26,6 @@ public class user implements Serializable {
     private String zipCode;
     private String city;
     private String state;
-
-    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
-    @ToString.Exclude
-    @EqualsAndHashCode.Exclude
-    private Set<order> orders = new LinkedHashSet<>();
 
     /**
      * Gets last name.
@@ -188,6 +179,9 @@ public class user implements Serializable {
     public String getFirstName() {
         return firstName;
     }
+    public int getId() {
+        return id;
+    }
 
     /**
      * Sets first name.
@@ -198,31 +192,4 @@ public class user implements Serializable {
         this.firstName = firstName;
     }
 
-    /**
-     * Gets orders.
-     *
-     * @return the orders
-     */
-    public Set<order> getOrders() {
-        return orders;
-    }
-
-    /**
-     * Sets orders.
-     *
-     * @param orders the orders
-     */
-    public void setOrders(Set<order> orders) {
-        this.orders = orders;
-    }
-
-    /**
-     * Add order.
-     *
-     * @param order the order
-     */
-    public void addOrder(order order) {
-        orders.add(order);
-
-    }
 }

@@ -14,7 +14,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.LinkedHashSet;
 import java.util.Objects;
 
 /**
@@ -42,7 +41,6 @@ public class editAction extends HttpServlet {
             newUser.setState(request.getParameter("state"));
             newUser.setZipCode(request.getParameter("zip"));
             newUser.setPassword(request.getParameter("password"));
-            newUser.setOrders(new LinkedHashSet<>());
             logger.debug("editing User: " + newUser);
             request.setAttribute("loggedUser", newUser);
             session.setAttribute("loggedUser", newUser);
