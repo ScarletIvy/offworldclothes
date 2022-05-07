@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  * The type Logout.
@@ -21,6 +22,7 @@ public class logout extends HttpServlet {
         request.setAttribute("loggedUser", null);
         session.setAttribute("loggedIn", false);
         session.setAttribute("loggedUser", null);
+        session.setAttribute("pastOrders", new ArrayList<>());
         RequestDispatcher dispatcher = request.getRequestDispatcher("landing");
         dispatcher.forward(request, response);
     }

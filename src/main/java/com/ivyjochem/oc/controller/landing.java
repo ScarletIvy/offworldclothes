@@ -32,6 +32,7 @@ public class landing extends HttpServlet {
         request.setAttribute("total", total);
         request.setAttribute("loggedIn", loggedIn);
         request.setAttribute("loggedUser", loggedUser);
+        request.setAttribute("pastOrders", new ArrayList<>());
         HttpSession session = request.getSession(true);
         session.setAttribute("cart", cart);
         session.setAttribute("prices", prices);
@@ -39,6 +40,7 @@ public class landing extends HttpServlet {
         session.setAttribute("total", total);
         session.setAttribute("loggedIn", loggedIn);
         session.setAttribute("loggedUser", loggedUser);
+        session.setAttribute("pastOrders", new ArrayList<>());
         RequestDispatcher dispatcher = request.getRequestDispatcher("home");
         dispatcher.forward(request, response);
     }
