@@ -179,6 +179,12 @@ public class user implements Serializable {
     public String getFirstName() {
         return firstName;
     }
+
+    /**
+     * Gets id.
+     *
+     * @return the id
+     */
     public int getId() {
         return id;
     }

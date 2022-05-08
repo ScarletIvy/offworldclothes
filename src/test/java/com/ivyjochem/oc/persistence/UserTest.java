@@ -11,7 +11,7 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 /**
- * Created by paulawaite on 2/2/16.
+ * The type User test.
  */
 public class UserTest {
 

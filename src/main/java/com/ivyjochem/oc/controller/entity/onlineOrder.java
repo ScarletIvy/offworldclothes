@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 
 /**
- * The type Order.
+ * The type Online order.
  */
 @Data
 @Entity
@@ -77,6 +77,12 @@ public class onlineOrder implements Serializable {
     public int getUserId(){
         return userId;
     }
+
+    /**
+     * Gets id.
+     *
+     * @return the id
+     */
     public int getId() {
         return id;
     }

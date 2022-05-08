@@ -10,7 +10,7 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 /**
- * Created by paulawaite on 2/2/16.
+ * The type Online order test.
  */
 public class onlineOrderTest {
 
@@ -23,7 +23,7 @@ public class onlineOrderTest {
      */
     DatabaseUtility databaseUtility;
     /**
-     * The Users.
+     * The Orders.
      */
     List<onlineOrder> orders;
 
@@ -43,7 +43,7 @@ public class onlineOrderTest {
 
 
     /**
-     * Test get all users.
+     * Test get all orders.
      *
      * @throws Exception the exception
      */
@@ -54,7 +54,7 @@ public class onlineOrderTest {
     }
 
     /**
-     * Test update user.
+     * Test update order.
      *
      * @throws Exception the exception
      */
@@ -77,7 +77,7 @@ public class onlineOrderTest {
     }
 
     /**
-     * Test delete user.
+     * Test delete order.
      *
      * @throws Exception the exception
      */

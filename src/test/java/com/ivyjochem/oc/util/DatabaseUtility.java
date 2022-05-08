@@ -13,7 +13,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
- * Class to run sql statements as part of set up or tear down in the unit tests.
+ * The type Database utility.
  */
 public class DatabaseUtility {
 
@@ -41,9 +41,9 @@ public class DatabaseUtility {
 
 
     /**
-     * Run the sql.
+     * Run sql.
      *
-     * @param sqlFile the sql file to be read and executed line by line
+     * @param sqlFile the sql file
      */
     public void runSQL(String sqlFile) {
         Connection conn = null;
