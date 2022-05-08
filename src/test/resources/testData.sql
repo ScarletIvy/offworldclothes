@@ -1,6 +1,12 @@
-INSERT INTO octest.user (email, firstName, lastName, password, userName) VALUES ('UserDaoTester@gmail.com0', 'Unit0', 'Test0', 'supersecret0', 'UnitTester0');
-INSERT INTO octest.user (email, firstName, lastName, password, userName) VALUES ('UserDaoTester@gmail.com1', 'Unit1', 'Test1', 'supersecret1', 'UnitTester1');
-INSERT INTO octest.user (email, firstName, lastName, password, userName) VALUES ('UserDaoTester@gmail.com2', 'Unit2', 'Test2', 'supersecret2', 'UnitTester2');
-INSERT INTO octest.user (email, firstName, lastName, password, userName) VALUES ('UserDaoTester@gmail.com3', 'Unit3', 'Test3', 'supersecret3', 'UnitTester3');
-INSERT INTO octest.user (email, firstName, lastName, password, userName) VALUES ('UserDaoTester@gmail.com4', 'Unit4', 'Test4', 'supersecret4','UnitTester4');
-INSERT INTO octest.user (email, firstName, lastName, password, userName) VALUES ('admin@gmail.com', 'admin', 'Test', 'supersecret', 'UnitTesterA');
+INSERT INTO octest.user (firstName,lastName,email,password,userName,streetAddress,zipCode,city,state) VALUES('test1','test1','test1','test1','test1','test1','test1','test1','test1');
+INSERT INTO octest.user (firstName,lastName,email,password,userName,streetAddress,zipCode,city,state) VALUES('test2','test2','test2','test2','test2','test2','test2','test2','test2');
+INSERT INTO octest.user (firstName,lastName,email,password,userName,streetAddress,zipCode,city,state) VALUES('test3','test3','test3','test3','test3','test3','test3','test3','test3');
+INSERT INTO octest.user (firstName,lastName,email,password,userName,streetAddress,zipCode,city,state) VALUES('test4','test4','test4','test4','test4','test4','test4','test4','test4');
+INSERT INTO octest.user (firstName,lastName,email,password,userName,streetAddress,zipCode,city,state) VALUES('test5','test5','test5','test5','test5','test5','test5','test5','test5');
+INSERT INTO octest.user (firstName,lastName,email,password,userName,streetAddress,zipCode,city,state) VALUES('test6','test6','test6','test6','test6','test6','test6','test6','test6');
+INSERT INTO octest.onlineorder (userId,shippingAddress,total) VALUES (1,'test address','12');
+INSERT INTO octest.onlineorder (userId,shippingAddress,total) VALUES (2,'test address 2','31');
+INSERT INTO octest.onlineorder (userId,shippingAddress,total) VALUES (3,'test address 3','56');
+INSERT INTO octest.onlineorder (userId,shippingAddress,total) VALUES (4,'test address 4','56');
+INSERT INTO octest.onlineorder (userId,shippingAddress,total) VALUES (5,'test address 5','89');
+INSERT INTO octest.onlineorder (userId,shippingAddress,total) VALUES (6,'test address 6','47');

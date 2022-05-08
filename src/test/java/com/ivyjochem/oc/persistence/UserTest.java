@@ -133,7 +133,7 @@ public class UserTest {
     public void testGetAllUsersWithLastNameExact() throws Exception {
         users = dao.findByPropertyEqual("lastName", "Test1");
         assertTrue(users.size() > 0);
-        assertTrue(users.get(0).getFirstName().equals("Unit1"));
+        assertTrue(users.get(0).getFirstName().equals("test1"));
     }
 
 }

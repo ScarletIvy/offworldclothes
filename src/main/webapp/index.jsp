@@ -15,8 +15,25 @@
     <body>
         <jsp:include page="includes/header.jsp"/>
         <jsp:include page="includes/nav.jsp"/>
-        <h2>Clothes for trans people, by trans people</h2>
-        <!--Featured products here-->
+        <div class="container">
+        <h2 class="row">Clothes for trans people, by trans people</h2>
+        <div id="carouselSlidesOnly" class="carousel slide row justify-content-center" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="${pageContext.request.contextPath}/images/shirt.png" class="d-block w-10" alt="shirt">
+                </div>
+                <div class="carousel-item">
+                    <img src="${pageContext.request.contextPath}/images/hoodie.png" class="d-block w-10" alt="hoodie">
+                </div>
+                <div class="carousel-item">
+                    <img src="${pageContext.request.contextPath}/images/pants.png" class="d-block w-10" alt="pants">
+                </div>
+                <div class="carousel-item">
+                    <img src="${pageContext.request.contextPath}/images/skirt.png" class="d-block w-10" alt="skirt">
+                </div>
+            </div>
+        </div>
+        </div>
         <jsp:include page="includes/footer.jsp"/>
     </body>
 </html>
