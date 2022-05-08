@@ -10,7 +10,11 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 /**
- * The type Online order test.
+ * runs test on orders
+ *
+ * loosly adapted from fat bike trail reports test classes
+ *
+ * Created by ivyjochem
  */
 public class onlineOrderTest {
 

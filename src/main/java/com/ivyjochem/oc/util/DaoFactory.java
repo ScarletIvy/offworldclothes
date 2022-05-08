@@ -3,7 +3,8 @@ package com.ivyjochem.oc.util;
 import com.ivyjochem.oc.persistence.GenericDao;
 
 /**
- * The type Dao factory.
+ * creates generic daos, taken from fat bike trail reports and tweaked to work with my hibernate structure
+ * Created by paulawaite, adapted by ivyjochem
  */
 public class DaoFactory {
 

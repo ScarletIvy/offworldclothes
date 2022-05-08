@@ -16,16 +16,18 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
- * The type Sign up action.
+ * Created by ivyjochem
  */
 @WebServlet(name = "signupaction", value = "/signupaction")
 public class signUpAction extends HttpServlet {
         private final Logger logger = LogManager.getLogger(this.getClass());
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
     }
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         if(request.getParameter("password").equals(request.getParameter("repeatPassword"))) {
             HttpSession session = request.getSession(true);
             user user = new user();

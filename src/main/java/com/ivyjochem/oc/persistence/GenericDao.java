@@ -14,7 +14,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * The type Generic dao.
+ * A generic DAO somewhat inspired by http://rodrigouchoa.wordpress.com
+ *
+ * taken from fat bike trail reports and adapted to work with my hibernate structure
  *
  * @param <T> the type parameter
  */

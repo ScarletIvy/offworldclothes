@@ -14,12 +14,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * The type Landing.
+ * Created by ivyjochem
  */
 @WebServlet(name = "landing", value = "/landing")
 public class landing extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         List cart = new ArrayList<>();
         List prices = new ArrayList<>();
         List sizes = new ArrayList<>();
@@ -45,6 +46,7 @@ public class landing extends HttpServlet {
         dispatcher.forward(request, response);
     }
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
     }
 }

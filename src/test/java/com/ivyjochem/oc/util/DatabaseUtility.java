@@ -13,7 +13,11 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
- * The type Database utility.
+ * Class to run sql statements as part of set up or tear down in the unit tests.
+ *
+ * taken from fat bike trail reports and adapted to work with my database
+ *
+ * Created by paulawaite and adapted by ivyjochem
  */
 public class DatabaseUtility {
 

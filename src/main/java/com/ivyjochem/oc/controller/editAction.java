@@ -17,21 +17,24 @@ import java.io.IOException;
 import java.util.Objects;
 
 /**
- * The type Edit action.
+ * Created by ivyjochem
  */
 @WebServlet(name = "editaction", value = "/editaction")
 public class editAction extends HttpServlet {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
     }
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         HttpSession session = request.getSession(true);
         GenericDao dao = DaoFactory.createDao(user.class);
         user newUser = (user) session.getAttribute("loggedUser");
-        if((Objects.equals(request.getParameter("password"), request.getParameter("repeatPassword"))) && (Objects.equals(request.getParameter("currentPassword"), newUser.getPassword()))) {
+        if((Objects.equals(request.getParameter("password"), request.getParameter("repeatPassword")))
+                && (Objects.equals(request.getParameter("currentPassword"), newUser.getPassword()))) {
             newUser.setUserName(request.getParameter("username"));
             newUser.setFirstName(request.getParameter("firstName"));
             newUser.setLastName(request.getParameter("lastName"));

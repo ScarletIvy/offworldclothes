@@ -17,16 +17,18 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * The type Loginaction.
+ * Created by ivyjochem
  */
 @WebServlet(name = "loginaction", value = "/loginaction")
 public class loginaction extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         HttpSession session = request.getSession(true);
         Map<String, Object> info = new HashMap<String,Object>();
         info.put("userName",request.getParameter("username"));

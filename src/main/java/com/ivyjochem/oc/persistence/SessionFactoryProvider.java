@@ -8,7 +8,12 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 
 /**
- * The type Session factory provider.
+ * This file provides a SessionFactory for use with DAOs using Hibernate
+ *
+ * taken from fatbike trail reports and adapted for use with my hibernate structure
+ *
+ * @author paulawaite adapted by ivyjochem
+ * @version 2.2 5/8/2022.
  */
 public class SessionFactoryProvider {
 

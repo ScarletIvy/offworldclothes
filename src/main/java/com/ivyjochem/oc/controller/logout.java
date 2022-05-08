@@ -11,12 +11,13 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 /**
- * The type Logout.
+ * Created by ivyjochem
  */
 @WebServlet(name = "logout", value = "/logout")
 public class logout extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         HttpSession session = request.getSession(true);
         request.setAttribute("loggedIn", false);
         request.setAttribute("loggedUser", null);
@@ -27,6 +28,7 @@ public class logout extends HttpServlet {
         dispatcher.forward(request, response);
     }
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
     }
 }

@@ -11,15 +11,17 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 /**
- * The type Add to cart.
+ * Created by ivyjochem
  */
 @WebServlet(name = "addToCart", value = "/addToCart")
 public class addToCart extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
     }
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         HttpSession session = request.getSession(true);
         ArrayList cart = (ArrayList)session.getAttribute("cart");
         ArrayList prices = (ArrayList)session.getAttribute("prices");

@@ -18,12 +18,13 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * The type Past orders.
+ * Created by ivyjochem
  */
 @WebServlet(name = "pastOrders", value = "/pastOrders")
 public class pastOrders extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         HttpSession session = request.getSession(true);
         user currentUser = (user)session.getAttribute("loggedUser");
         Map<String, Object> search = new HashMap<String,Object>();
@@ -37,7 +38,8 @@ public class pastOrders extends HttpServlet {
         dispatcher.forward(request, response);
     }
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
     }
 }
 

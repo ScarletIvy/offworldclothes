@@ -11,7 +11,11 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 /**
- * The type User test.
+ * runs test on users
+ *
+ * taken from fat bike trail reports and adapted to work with my data
+ *
+ * Created by paulawaite and adapted by ivyjochem
  */
 public class UserTest {
 
@@ -65,14 +69,9 @@ public class UserTest {
         int id = user.getId();
         String updateValue = LocalDate.now().toString();
         String emailBeforeUpdate = user.getEmail();
-        // it would be a good idea to test each value like this
-
         user.setEmail(user.getEmail() + updateValue);
-
         dao.saveOrUpdate(user);
-
         user updatedUser = (user) dao.getById(id);
-
         assertEquals(user, updatedUser);
 
     }
@@ -89,9 +88,7 @@ public class UserTest {
         int id = userToDelete.getId();
         dao.delete(userToDelete);
         int sizeAfterDelete = dao.getAll().size();
-
         user deletedUser = (user) dao.getById(id);
-
         assertEquals(sizeBeforeDelete - 1, sizeAfterDelete);
         assertNull(deletedUser);
 
@@ -105,20 +102,15 @@ public class UserTest {
      */
     @Test
     public void testAddUser() throws Exception {
-
         int insertedUserId = 0;
-
         user user = new user();
         user.setFirstName("Unit");
         user.setLastName("Test");
         user.setUserName("UnitTesterB");
         user.setEmail("UserDaoTesterB@gmail.com");
         user.setPassword("supersecret");
-
-
         insertedUserId = dao.insert(user);
         user retrievedUser = (user) dao.getById(insertedUserId);
-
         assertTrue(insertedUserId > 0);
         assertEquals(user, retrievedUser);
 
