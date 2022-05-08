@@ -5,8 +5,8 @@
   Time: 6:40 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:include page="../includes/contentType.jsp"/>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>OffWorld Clothes - Shirt</title>
@@ -47,7 +47,14 @@
                     <input type="hidden" id="img" name="img" class="img" value="${pageContext.request.contextPath}/images/shirt.png">
                     <div class="form-group">
                         <div class="col-md-4">
-                            <button id="add" type="submit" name="add" class="btn btn-primary">Add To Cart</button>
+                            <c:choose>
+                                <c:when test="${loggedIn == true}">
+                                    <button id="add" type="submit" name="add" class="btn btn-primary">Add To Cart</button>
+                                </c:when>
+                                <c:otherwise>
+                                    <p>Must be logged in to add to cart</p>
+                                </c:otherwise>
+                            </c:choose>
                         </div>
                     </div>
                 </fieldset>
