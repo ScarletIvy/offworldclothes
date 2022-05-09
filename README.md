@@ -2,7 +2,7 @@
 
 # [IMPORTANT PLEASE READ](DesignDocs/important.md)
 
-## [Presentation]()
+## [Presentation](https://drive.google.com/file/d/1dLhrCF7mpWyE5Y24EMAFz4C04iGsqRPR/view?usp=sharing)
 
 ### Problem Statement
 
